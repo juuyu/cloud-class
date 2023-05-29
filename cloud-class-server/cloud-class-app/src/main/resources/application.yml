@@ -1,0 +1,74 @@
+server:
+  port: 8081
+spring:
+  servlet:
+    multipart:
+      max-file-size: 1000MB
+      max-request-size: 1000MB
+  application:
+    name: cloud-class
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/cloud-class?characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&tinyInt1isBit=false&transformedBitIsBoolean=false&allowPublicKeyRetrieval=true
+    username: root
+    password: abc@123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+      database: 0
+  mail:
+    host: smtp.163.com
+    protocol: smtp
+    default-encoding: UTF-8
+    username: username
+    password: password
+    test-connection: true
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+mybatis-plus:
+  mapperPackage: com.olrtc.app.dao
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+# redisson 配置
+redisson:
+  # 线程池数量
+  threads: 4
+  # Netty线程池数量
+  nettyThreads: 8
+  # 单节点配置
+  singleServerConfig:
+    # 客户端名称
+    clientName: ${spring.application.name}
+    # 最小空闲连接数
+    connectionMinimumIdleSize: 8
+    # 连接池大小
+    connectionPoolSize: 32
+    # 连接空闲超时，单位：毫秒
+    idleConnectionTimeout: 10000
+    # 命令等待超时，单位：毫秒
+    timeout: 3000
+    # 发布和订阅连接池大小
+    subscriptionConnectionPoolSize: 50
+
+minio:
+  endpoint: http://localhost:9000/
+  baseUrl: http://localhost:9000/
+  accessKey: admin
+  secretKey: 12345678
+  common-bucket: cloud-class
+
+openai:
+  token: sk-token
+  baseUrl: https://api.openai.com/
+  proxyUrl: https://api.openai-proxy.com/
+
+live:
+  publishUrl: webrtc://localhost:1985/live/
+  liveUrl: webrtc://localhost/live/

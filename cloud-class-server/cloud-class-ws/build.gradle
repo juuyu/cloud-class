@@ -1,0 +1,9 @@
+dependencies {
+    implementation project(":cloud-class-common:cloud-class-common-core")
+    implementation project(":cloud-class-common:cloud-class-common-redis")
+
+    implementation "io.netty:netty-all:4.1.86.Final"
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-webflux
+    implementation 'org.springframework.boot:spring-boot-starter-webflux:3.0.2'
+
+}

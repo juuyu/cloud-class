@@ -1,0 +1,17 @@
+group = 'com.olrtc'
+version = '0.0.1'
+sourceCompatibility = '11'
+bootJar.enabled = false
+
+// version
+ext {
+    // core
+    commonslang3Ver = "3.12.0"
+
+    //security
+    saTokenVer = "1.34.0"
+
+    // redis
+    redissonVer = "3.19.1"
+
+}

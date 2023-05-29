@@ -1,0 +1,12 @@
+dependencies {
+
+// https://mvnrepository.com/artifact/com.mysql/mysql-connector-j
+    api 'com.mysql:mysql-connector-j:8.0.32'
+
+    // https://mvnrepository.com/artifact/com.baomidou/mybatis-plus-boot-starter
+    api 'com.baomidou:mybatis-plus-boot-starter:3.5.3.1'
+
+    
+    // common-core
+    api project(":cloud-class-common:cloud-class-common-core")
+}

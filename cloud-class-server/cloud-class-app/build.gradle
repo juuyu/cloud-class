@@ -1,0 +1,21 @@
+dependencies {
+    implementation project(":cloud-class-common:cloud-class-common-redis")
+    implementation project(":cloud-class-common:cloud-class-common-mybatis")
+    implementation project(":cloud-class-common:cloud-class-common-security")
+    implementation 'org.springframework.boot:spring-boot-starter-webflux:3.0.2'
+    implementation 'cn.hutool:hutool-all:5.8.15'
+    // aop
+    implementation 'org.springframework.boot:spring-boot-starter-aop:3.0.4'
+    // minio, s3
+    implementation 'io.minio:minio:8.5.2'
+    implementation 'com.amazonaws:aws-java-sdk-s3:1.12.435'
+    // freemarker
+    implementation 'org.freemarker:freemarker:2.3.31'
+    // convert html to pdf
+    implementation 'org.xhtmlrenderer:flying-saucer-pdf:9.1.22'
+    implementation 'com.itextpdf.tool:xmlworker:5.5.13.3'
+    implementation 'com.itextpdf:itext7-core:7.2.5'
+    implementation 'com.itextpdf:html2pdf:4.0.5'
+    // mail
+    implementation 'org.springframework.boot:spring-boot-starter-mail:3.0.1'
+}

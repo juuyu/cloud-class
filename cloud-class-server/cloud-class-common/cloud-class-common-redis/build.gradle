@@ -1,0 +1,7 @@
+dependencies {
+    // redisson
+    implementation "org.redisson:redisson-spring-boot-starter:$redissonVer"
+
+    // common-core
+    api project(":cloud-class-common:cloud-class-common-core")
+}
